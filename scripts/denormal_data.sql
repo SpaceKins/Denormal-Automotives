@@ -1,4 +1,18 @@
 -- db denormal_cars
+--DROP DATABASE IF EXISTS purchases_demo;
+--CREATE DATABASE denormal_cars;
+
+\c denormal_cars;
+
+
+DROP USER IF EXISTS denormal_user;
+CREATE USER denormal_user CREATEDB LOGIN;  -- WITH PASSWORD 'password' 
+
+DROP USER IF EXISTS normal_user;
+CREATE USER normal_user CREATEDB LOGIN;  -- WITH PASSWORD 'password' 
+
+
+
 CREATE TABLE IF NOT EXISTS car_models
 (
   make_code character varying(125) NOT NULL,
